@@ -20,25 +20,25 @@ yes gocs1337 | passwd csgoserver
 
 ##Get csgoserver installer from web and launch it##
 cd /home/csgoserver
-sudo -u csgoserver wget https://gameservermanagers.com/dl/csgoserver
-sudo -u csgoserver chmod +x csgoserver
-sudo -u csgoserver ./csgoserver auto-install
+sudo -i -u csgoserver wget https://gameservermanagers.com/dl/csgoserver
+sudo -i -u csgoserver chmod +x csgoserver
+sudo -i -u csgoserver ./csgoserver auto-install
 
 ##Install metamod and sourcemod##
-sudo -u csgoserver printf 'metamod' | sudo -u csgoserver ./csgoserver mods-install
-sudo -u csgoserver printf 'sourcemod' | sudo -u csgoserver ./csgoserver mods-install
+sudo -i -u csgoserver printf 'metamod' | sudo -i -u csgoserver ./csgoserver mods-install
+sudo -i -u csgoserver printf 'sourcemod' | sudo -i -u csgoserver ./csgoserver mods-install
 
 
 ##Change Config##
 #Hostname
-sudo -u csgoserver sed -i 's/hostname "LinuxGSM"/hostname "E-Sports.lu - Match #1337"/' /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
+sudo -i -u csgoserver sed -i 's/hostname "LinuxGSM"/hostname "E-Sports.lu - Match #1337"/' /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
 #GSLT
-sudo -u csgoserver sed -i 's/gslt=""/gslt="5BB4C57E5A5A45F60126EAE8D15021C1"/' /home/csgoserver/csgoserver
+sudo -i -u csgoserver sed -i 's/gslt=""/gslt="5BB4C57E5A5A45F60126EAE8D15021C1"/' /home/csgoserver/csgoserver
 #Game Mode
-sudo -u csgoserver sed -i 's/gamemode="0"/gamemode="1"/' /home/csgoserver/csgoserver
+sudo -i -u csgoserver sed -i 's/gamemode="0"/gamemode="1"/' /home/csgoserver/csgoserver
 
 #Tick Rate
-sudo -u csgoserver sed -i 's/tickrate="64"/tickrate="128"/' /home/csgoserver/csgoserver
+sudo -i -u csgoserver sed -i 's/tickrate="64"/tickrate="128"/' /home/csgoserver/csgoserver
 
 #Enable HLTV for Demo Recording
-sudo -u csgoserver echo "tv_enable 1" >> /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
+sudo -i -u csgoserver echo "tv_enable 1" >> /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg

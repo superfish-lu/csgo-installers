@@ -42,7 +42,3 @@ sudo -u csgoserver sed -i 's/tickrate="64"/tickrate="128"/' /home/csgoserver/csg
 
 #Enable HLTV for Demo Recording
 sudo -u csgoserver echo "tv_enable 1" >> /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
-
-##Start Server##
-cd /home/csgoserver
-sudo -u csgoserver ./csgoserver start

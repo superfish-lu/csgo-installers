@@ -17,3 +17,18 @@ sudo -u csgoserver tar -xzf SteamWorks-git121-linux.tar.gz
 cd /home/csgoserver
 sudo -u csgoserver ./csgoserver stop
 sudo -u csgoserver ./csgoserver start
+
+##Record % Store Server Details##
+#Full output to tmp.txt then grep relevant details to srv-details-color.txt
+sudo -u csgoserver ./csgoserver details > tmp.txt
+sudo -u csgoserver grep "Server name" tmp.txt >> srv-details-color.txt
+sudo -u csgoserver grep "Server IP" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "Server password" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "RCON password" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "Maxplayers" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "Game mode" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "Tick rate" tmp.txt >> srv-details-colors.txt
+sudo -u csgoserver grep "Status" tmp.txt >> srv-details-colors.txt
+
+#Remove Colors Code from Output for Readability
+sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" srv-details-colors.txt > srv-details.txt

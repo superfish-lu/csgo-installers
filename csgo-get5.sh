@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##Install Get5##
 #Base Plugin and API 
 cd /home/csgoserver/serverfiles/csgo

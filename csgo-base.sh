@@ -44,6 +44,6 @@ sudo -i -u csgoserver sed -i 's/tickrate="64"/tickrate="128"/' /home/csgoserver/
 sudo -i -u csgoserver echo "tv_enable 1" >> /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
 
 #Add admins to SourceMod
-sudo -i -u csgoserver echo ""STEAM_0:0:77074401" "99:z"" >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
-sudo -i -u csgoserver echo ""STEAM_0:1:18037936" "99:z"" >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
-sudo -i -u csgoserver echo ""STEAM_0:1:2483865" "99:z"" >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+sudo -i -u csgoserver echo '"STEAM_0:0:77074401" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+sudo -i -u csgoserver echo '"STEAM_0:1:18037936" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+sudo -i -u csgoserver echo '"STEAM_0:1:2483865" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini

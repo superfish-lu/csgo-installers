@@ -25,7 +25,7 @@ yes gocs1337 | passwd csgoserver
 
 ##Preload csgo files from files.e-sports.lu for faster install
 cd /home/csgoserver
-sudo -i -u csgoserver aria2c -x2 http://files.e-sports.lu/csgo.tar.gz
+sudo -i -u csgoserver aria2c -x10 http://files.e-sports.lu/csgo.tar.gz
 sudo -i -u csgoserver mkdir serverfiles
 sudo -i -u csgoserver mkdir serverfiles/csgo
 sudo -i -u csgoserver tar -zxvf csgo.tar.gz

@@ -36,6 +36,8 @@ sudo -i -u csgoserver mv * serverfiles/csgo
 sudo -i -u csgoserver wget http://files.e-sports.lu/csgo-2.tar.gz
 sudo -i -u csgoserver tar -zxvf csgo-2.tar.gz
 sudo -i -u csgoserver rm csgo-2.tar.gz
+sudo -i -u csgoserver chmod 777 -R serverfiles
+
 
 ##Get csgoserver installer from web and launch it##
 cd /home/csgoserver

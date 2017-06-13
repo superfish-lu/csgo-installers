@@ -13,7 +13,7 @@ sudo sysctl -p
 ##Install Requirements##
 dpkg --add-architecture i386
 apt-get update
-apt-get -q -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" install unzip tmux lib32gcc1 libstdc++6:i386 binutils
+apt-get -q -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" install unzip tmux lib32gcc1 libstdc++6:i386 binutils aria2
 
 
 ##Add user csgoserver with no password##
@@ -25,7 +25,7 @@ yes gocs1337 | passwd csgoserver
 
 ##Preload csgo files from files.e-sports.lu for faster install
 cd /home/csgoserver
-sudo -i -u csgoserver wget http://files.e-sports.lu/csgo.tar.gz
+sudo -i -u csgoserver aria2c -x2 http://files.e-sports.lu/csgo.tar.gz
 sudo -i -u csgoserver mkdir serverfiles
 sudo -i -u csgoserver mkdir serverfiles/csgo
 sudo -i -u csgoserver tar -zxvf csgo.tar.gz
@@ -33,9 +33,10 @@ sudo -i -u csgoserver rm csgo.tar.gz
 sudo -i -u csgoserver mv * serverfiles/csgo
 
 
-sudo -i -u csgoserver wget http://files.e-sports.lu/csgo-2.tar.gz
-sudo -i -u csgoserver tar -zxvf csgo-2.tar.gz
-sudo -i -u csgoserver rm csgo-2.tar.gz
+#sudo -i -u csgoserver wget http://files.e-sports.lu/csgo-2.tar.gz
+#sudo -i -u csgoserver tar -zxvf csgo-2.tar.gz
+#sudo -i -u csgoserver rm csgo-2.tar.gz
+#sudo -i -u csgoserver chmod 777 -R serverfiles
 
 
 ##Get csgoserver installer from web and launch it##

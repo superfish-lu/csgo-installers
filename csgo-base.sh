@@ -26,7 +26,7 @@ cd /home/csgoserver
 sudo -i -u csgoserver aria2c -x10 http://files.e-sports.lu/csgo.tar.gz
 sudo -i -u csgoserver mkdir serverfiles
 sudo -i -u csgoserver mkdir serverfiles/csgo
-sudo -i -u csgoserver tar -zxvf csgo.tar.gz
+sudo -i -u csgoserver tar -zxvf csgo.tar.gz -C serverfiles/csgo
 sudo -i -u csgoserver rm csgo.tar.gz
 
 sudo -i -u csgoserver aria2c -x10 http://files.e-sports.lu/csgo-2.tar.gz

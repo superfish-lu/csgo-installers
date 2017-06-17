@@ -23,25 +23,18 @@ yes gocs1337 | passwd csgoserver
 
 ##Preload csgo files from files.e-sports.lu for faster install
 cd /home/csgoserver
-sudo -i -u csgoserver aria2c -x10 http://files.e-sports.lu/csgo.tar.gz http://retake.e-sports.lu/csgo.tar.gz http://multi.e-sports.lu/csgo.tar.gz
-sudo -i -u csgoserver mkdir serverfiles
-sudo -i -u csgoserver mkdir serverfiles/csgo
-sudo -i -u csgoserver tar -zxvf csgo.tar.gz -C serverfiles/csgo
-sudo -i -u csgoserver rm csgo.tar.gz
-
-sudo -i -u csgoserver aria2c -x10 http://files.e-sports.lu/csgo-2.tar.gz http://retake.e-sports.lu/csgo-2.tar.gz http://multi.e-sports.lu/csgo-2.tar.gz
-sudo -i -u csgoserver tar -zxvf csgo-2.tar.gz
-sudo -i -u csgoserver rm csgo-2.tar.gz
+sudo -i -u csgoserver aria2c -x10 aria2c -x10 http://files.e-sports.lu/serverfiles.tar.gz http://retake.e-sports.lu/serverfiles.tar.gz http://multi.e-sports.lu/serverfiles.tar.gz
+sudo -i -u csgoserver tar -xzvf serverfiles.tar.gz
+sudo -i -u csgoserver rm serverfiles.tar.gz
 
 ##Get csgoserver installer from web and launch it##
-cd /home/csgoserver
 sudo -i -u csgoserver wget https://gameservermanagers.com/dl/csgoserver
 sudo -i -u csgoserver chmod +x csgoserver
 sudo -i -u csgoserver ./csgoserver auto-install
 
 ##Install metamod and sourcemod##
-sudo -i -u csgoserver printf 'metamod' | sudo -i -u csgoserver ./csgoserver mods-install
-sudo -i -u csgoserver printf 'sourcemod' | sudo -i -u csgoserver ./csgoserver mods-install
+#sudo -i -u csgoserver printf 'metamod' | sudo -i -u csgoserver ./csgoserver mods-install
+#sudo -i -u csgoserver printf 'sourcemod' | sudo -i -u csgoserver ./csgoserver mods-install
 
 
 ##Change Config##
@@ -59,6 +52,6 @@ sudo -i -u csgoserver sed -i 's/tickrate="64"/tickrate="128"/' /home/csgoserver/
 sudo -i -u csgoserver echo "tv_enable 1" >> /home/csgoserver/serverfiles/csgo/cfg/csgo-server.cfg
 
 #Add admins to SourceMod
-sudo -i -u csgoserver echo '"STEAM_0:0:77074401" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
-sudo -i -u csgoserver echo '"STEAM_0:1:18037936" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
-sudo -i -u csgoserver echo '"STEAM_0:1:2483865" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+#sudo -i -u csgoserver echo '"STEAM_0:0:77074401" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+#sudo -i -u csgoserver echo '"STEAM_0:1:18037936" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini
+#sudo -i -u csgoserver echo '"STEAM_0:1:2483865" "99:z"' >> /home/csgoserver/serverfiles/csgo/addons/sourcemod/configs/admins_simple.ini

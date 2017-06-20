@@ -28,8 +28,8 @@ sudo -i -u csgoserver tar -xzvf serverfiles.tar.gz
 sudo -i -u csgoserver rm serverfiles.tar.gz
 
 ##Get csgoserver installer from web and launch it##
-sudo -i -u csgoserver wget https://gameservermanagers.com/dl/csgoserver
-sudo -i -u csgoserver chmod +x csgoserver
+#sudo -i -u csgoserver wget https://gameservermanagers.com/dl/csgoserver
+sudo -i -u csgoserverwget -N --no-check-certificate https://gameservermanagers.com/dl/linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh csgoserver
 sudo -i -u csgoserver ./csgoserver auto-install
 
 ##Install metamod and sourcemod##

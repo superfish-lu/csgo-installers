@@ -29,7 +29,9 @@ sudo -i -u csgoserver rm serverfiles.tar.gz
 
 ##Get csgoserver installer from web and launch it##
 sudo -i -u csgoserver aria2c http://files.e-sports.lu/csgoserver http://multi.e-sports.lu/csgoserver http://retake.e-sports.lu/csgoserver
+sudo -i -u csgoserver chmod +x csgoserver
 sudo -i -u csgoserver ./csgoserver auto-install
+
 
 ##Install metamod and sourcemod##
 #sudo -i -u csgoserver printf 'metamod' | sudo -i -u csgoserver ./csgoserver mods-install
